@@ -11,7 +11,7 @@ A operação "POP" deixa o programador mover as suas alterações "escondidas", 
 
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
 
-Ao trabalhar com o GitHub, ter uma boa estratégia de branching é crucial na colaboração entre programadores e sua gestão.
+(Fonte: https://medium.com/@babuvenkatesh/github-branching-strategy-and-its-benefits-92e96d5ba75) Ao trabalhar com o GitHub, ter uma boa estratégia de branching é crucial na colaboração entre programadores e sua gestão.
 
 Com uma boa estratégia de branching quando se trabalha num projeto, tem as seguintes vantagens:
 
@@ -26,6 +26,19 @@ sem interferir no código principal
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em
 que consistem e como podem ser resolvidos esses conflitos?
+
+R:. Ao aplicar o comando "git stash pop", este aplica as mudanças guardadas em "rascunho", ou seja, em stash, e de seguida elimina-as.
+
+Podem existir conflitos nesse "merge", quando as alterações em stash são aplicadas por cima de novos "commits" ou outras alterações em progresso.
+
+Como resolver? -> Antes de executar o comando "git stash pop <stash-index>", assegurar que as alterações são aplicadas com o comando "git add".
+
+Se os ficheiros não aplicados possuem conflitos de "merge", o Git aborta a operação de eliminar a stash, com o erro: "error: Your local changes to the following files would be overwritten by merge"
+
+Quando há esta falha na operação merge, devemos verificar o ficheiro que falhou na mesma operação. Devemos aí resolver manualmente o conflito, e correr o comando: "git add <file(s)-that-failed-merge>"
+
+Devemos considerar também executar o comando "git stash drop <stash-index>".
+
 
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as
 diferenças entre eles?
