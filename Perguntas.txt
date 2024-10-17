@@ -11,6 +11,19 @@ A operação "POP" deixa o programador mover as suas alterações "escondidas", 
 
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
 
+Ao trabalhar com o GitHub, ter uma boa estratégia de branching é crucial na colaboração entre programadores e sua gestão.
+
+Com uma boa estratégia de branching quando se trabalha num projeto, tem as seguintes vantagens:
+
+1. Isolamento das tarefas: Uma estratégia de branching permite que os programadores trabalhem em funcionalidades, correção de erros, ou experiências isoladamente
+sem interferir no código principal
+
+2. Colaboração: Cada equipa que trabalhe num projeto pode criar a sua ramificação para trabalhar em tarefas independentemente.
+
+3. Testes e qualidade do código: Ao ter ramificações separadas em cada tarefa, o código pode ser testado e revisto antes de adicionado ao ramo principal. Isto permite também detetar erros antecipadamente, reduzindo a probabilidade de introduzir erros no código principal.
+
+4. Integração e implementação contínua: Os ramos são essenciais para implementar práticas contínuas de integração e implementação.
+
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em
 que consistem e como podem ser resolvidos esses conflitos?
 
