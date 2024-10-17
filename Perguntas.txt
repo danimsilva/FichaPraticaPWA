@@ -27,7 +27,7 @@ sem interferir no código principal
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em
 que consistem e como podem ser resolvidos esses conflitos?
 
-R:. Ao aplicar o comando "git stash pop", este aplica as mudanças guardadas em "rascunho", ou seja, em stash, e de seguida elimina-as.
+R:. (fonte: https://www.themoderncoder.com/fix-git-stash-conflicts/) Ao aplicar o comando "git stash pop", este aplica as mudanças guardadas em "rascunho", ou seja, em stash, e de seguida elimina-as.
 
 Podem existir conflitos nesse "merge", quando as alterações em stash são aplicadas por cima de novos "commits" ou outras alterações em progresso.
 
@@ -37,8 +37,15 @@ Se os ficheiros não aplicados possuem conflitos de "merge", o Git aborta a oper
 
 Quando há esta falha na operação merge, devemos verificar o ficheiro que falhou na mesma operação. Devemos aí resolver manualmente o conflito, e correr o comando: "git add <file(s)-that-failed-merge>"
 
-Devemos considerar também executar o comando "git stash drop <stash-index>".
+Devemos considerar também executar o comando "git stash drop <stash-index>" para garantir a eliminação do stash. 
 
 
 4 – “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as
 diferenças entre eles?
+
+R:. O cloning consiste na criação de uma cópia do repositório remoto num computador local, que podemos sincronizar com o remoto.
+
+O forking é uma cópia do repositório que permite-nos efetuar as nossas próprias alterações, sem impactar no projeto original.
+
+Estas duas operações diferem no sentido de que o forking não sincroniza com o projeto original, enquanto que o cloning
+sim.  
