@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos e operações do Git</title>
+</head>
+<body>
+    <h1>Conceitos e operações do Git</h1>
+
+    <h2>1. O que são operações de <Em>“Commit”</Em>, “Push” e “Pop” efetuadas num repositório?</h2>
+    <p><strong>R:</strong></p>
+    <ul>
+        <li>A operação <strong><Em>Commit</Em></strong> é usada para gravar alterações efetuadas no repositório git local. 
+            (fonte: <a href="https://graphite.dev/guides/git-add-commit-push">https://graphite.dev/guides/git-add-commit-push</a>)
+        </li>
+        <li>A operação <strong><Em>git push</Em></strong> carrega para um repositório remoto as alterações efetuadas a nível local, fornecendo redundância e tornando-as disponíveis para outros programadores. 
+            (fonte: <a href="https://graphite.dev/guides/git-add-commit-push">https://graphite.dev/guides/git-add-commit-push</a>)
+        </li>
+        <li>A operação <strong><Em>POP</Em></strong> permite ao programador mover as suas alterações "escondidas", ou seja, não partilhadas, para o diretório de trabalho, eliminando estas alterações do "stash". 
+            (fonte: <a href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-stash-pop">https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-stash-pop</a>)
+        </li>
+    </ul>
+
+    <h2>2. Quais são as vantagens de usar Branches num repositório git?</h2>
+    <p>(Fonte: <a href="https://medium.com/@babuvenkatesh/github-branching-strategy-and-its-benefits-92e96d5ba75">https://medium.com/@babuvenkatesh/github-branching-strategy-and-its-benefits-92e96d5ba75</a>)</p>
+    <p>Ao trabalhar com o GitHub, ter uma boa estratégia de <Em>branching</Em> é crucial na colaboração entre programadores e sua gestão.</p>
+    <p>Com uma boa estratégia de branching, ao trabalhar num projeto, tem as seguintes vantagens:</p>
+    <ul>
+        <li><strong>Isolamento das tarefas:</strong> Uma estratégia de branching permite que os programadores trabalhem em funcionalidades, correção de erros, ou experiências isoladamente sem interferir no código principal.</li>
+        <li><strong>Colaboração:</strong> Cada equipa que trabalhe num projeto pode criar a sua ramificação para trabalhar em tarefas independentemente.</li>
+        <li><strong>Testes e qualidade do código:</strong> Ao ter ramificações separadas em cada tarefa, o código pode ser testado e revisto antes de ser adicionado ao ramo principal. Isto permite também detetar erros antecipadamente, reduzindo a probabilidade de introduzir erros no código principal.</li>
+        <li><strong>Integração e implementação contínua:</strong> Os ramos são essenciais para implementar práticas contínuas de integração e implementação.</li>
+    </ul>
+
+    <h2>3. Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em que consistem e como podem ser resolvidos esses conflitos?</h2>
+    <p><strong>R:</strong> (fonte: <a href="https://www.themoderncoder.com/fix-git-stash-conflicts/">https://www.themoderncoder.com/fix-git-stash-conflicts/</a>)</p>
+    <p>Ao aplicar o comando "git stash pop", este aplica as mudanças guardadas em "rascunho", ou seja, em stash, e de seguida elimina-as.</p>
+    <p>Podem existir conflitos nesse "merge", quando as alterações em stash são aplicadas por cima de novos "commits" ou outras alterações em progresso.</p>
+    <p><strong><u>Como resolver?</u></strong></p>
+    <ul>
+        <li>Antes de executar o comando "git stash pop &lt;stash-index&gt;", assegurar que as alterações são aplicadas com o comando "git add".</li>
+        <li>Se os ficheiros não aplicados possuem conflitos de "merge", o Git aborta a operação de eliminar a stash, com o erro: "error: Your local changes to the following files would be overwritten by merge".</li>
+        <li>Quando há esta falha na operação merge, devemos verificar o ficheiro que falhou na mesma operação. Devemos aí resolver manualmente o conflito, e correr o comando: "git add &lt;file(s)-that-failed-merge&gt;".</li>
+        <li>Devemos considerar também executar o comando "git stash drop &lt;stash-index&gt;" para garantir a eliminação do stash.</li>
+    </ul>
+
+    <h2>4. “Clone” e “Fork” são formas diferentes de replicar um repositório Git. Quais as diferenças entre eles?</h2>
+    <p><strong>R:</strong> O cloning consiste na criação de uma cópia do repositório remoto num computador local, que podemos sincronizar com o remoto.</p>
+    <p>O forking é uma cópia do repositório que permite-nos efetuar as nossas próprias alterações, sem impactar no projeto original.</p>
+    <p>Estas duas operações diferem no sentido de que o forking não sincroniza com o projeto original, enquanto que o cloning sim.</p>
+</body>
+</html>
