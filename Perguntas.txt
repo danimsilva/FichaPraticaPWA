@@ -1,5 +1,14 @@
 1 - O que são operações de “Commit”, “Push” e “Pop” efetuadas num repositório?
 
+R: 
+
+A operação "Commit" é usada para gravar alterações efetuadas no repositório git local. (fonte: https://graphite.dev/guides/git-add-commit-push)
+
+A operação "git push" carrega para um repositório remoto 
+as alterações efetuadas a nível local, fornecendo redundância e tornando-as disponíveis para outros programadores(fonte: https://graphite.dev/guides/git-add-commit-push)
+
+A operação "POP" deixa o programador mover as suas alterações "escondidas", ou seja, não partilhadas, para o diretório de trabalho, eliminando estas alterações do "stash". (fonte: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/Git-stash-pop) 
+
 2 – Quais sáo as vantagens de usar Branchs num repositório git?
 
 3 – Nos Merges de conteúdos resultantes de um “Pop” podem resultar em conflitos. Em
